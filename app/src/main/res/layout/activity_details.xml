@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context="com.wkp.tiketbioskop.activities.Details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="Judul"
+            android:textSize="24sp"
+            android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_movie"
+                android:layout_width="150dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="5dp"
+                android:src="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btnMerk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_movie"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:text="Movie"/>
+
+            <Button
+                android:id="@+id/btnPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_movie"
+                android:layout_below="@+id/btnMerk"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="Enjoy The Movie"/>
+
+            <Button
+                android:id="@+id/btnBuy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_movie"
+                android:layout_below="@+id/btnPlaying"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="Buy Ticket"/>
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_movie"
+                android:layout_below="@+id/btnBuy"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="+"/>
+
+            <Button
+                android:id="@+id/btnKurang"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnBuy"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/btnTambah"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/tv_tampil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnBuy"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/btnKurang"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_load_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_movie"
+                android:layout_below="@+id/btnTambah"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="Details Movie"/>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Director :"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama_direktor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Writers : "
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_writers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama_writers"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stars : "
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_stars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama_stars"/>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="deskripsi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:maxLines="5"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
