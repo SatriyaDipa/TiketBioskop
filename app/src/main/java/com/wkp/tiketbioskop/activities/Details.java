@@ -20,6 +20,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener  
     public String EXTRA_DIREKTOR = "DIREKTOR";
     public String EXTRA_WRITER = "WRITER";
     public String EXTRA_STARS = "STARS";
+    SharedPref sharedPref;
 
     int total = 0;
 
@@ -29,6 +30,13 @@ public class Details extends AppCompatActivity implements View.OnClickListener  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPref(this);
+        if (sharedPref.loadNighModeState()==true){
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 

@@ -16,9 +16,17 @@ import polinema.ac.id.androiduistarter.R;
 public class MainActivity extends AppCompatActivity {
     RecyclerView rvMovie;
     ArrayList<Movie> movieList = new ArrayList<>();
+    SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPref(this);
+        if (sharedPref.loadNighModeState()==true){
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

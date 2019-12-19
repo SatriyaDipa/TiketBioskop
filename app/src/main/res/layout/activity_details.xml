@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    tools:context="com.wkp.tiketbioskop.activities.Details">
+    tools:context="com.wkp.tiketbioskop.activities.Details"
+    app:cardBackgroundColor="?attr/cardbackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:id="@+id/tv_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textColor="?attr/textcolor"
             android:textStyle="bold"
             android:text="Judul"
             android:textSize="24sp"
@@ -98,7 +99,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/btnKurang"
                 android:text="0"
-                android:textColor="@android:color/black"
+                android:textColor="?attr/textcolor"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -122,7 +123,7 @@
             android:text="Director :"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="?attr/textcolor"/>
 
         <TextView
             android:id="@+id/tv_director"
@@ -136,7 +137,7 @@
             android:text="Writers : "
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="?attr/textcolor"/>
 
         <TextView
             android:id="@+id/tv_writers"
@@ -150,7 +151,7 @@
             android:text="Stars : "
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="?attr/textcolor"/>
 
         <TextView
             android:id="@+id/tv_stars"
@@ -166,7 +167,7 @@
             android:text="deskripsi"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
+            android:textColor="?attr/textcolor"
             android:maxLines="5"/>
 
     </LinearLayout>

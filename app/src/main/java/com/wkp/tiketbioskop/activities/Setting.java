@@ -1,7 +1,6 @@
 package com.wkp.tiketbioskop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.widget.Switch;
 import polinema.ac.id.androiduistarter.R;
 
 public class Setting extends AppCompatActivity {
-    private Switch myswitch;
+    public Switch myswitch;
     SharedPref sharedPref;
 
     @Override
@@ -20,7 +19,9 @@ public class Setting extends AppCompatActivity {
         if (sharedPref.loadNighModeState()==true){
             setTheme(R.style.DarkTheme);
         }
-        else setTheme(R.style.AppTheme);
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         myswitch = (Switch) findViewById(R.id.myswitch);
